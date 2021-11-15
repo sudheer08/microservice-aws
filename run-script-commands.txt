@@ -1,0 +1,35 @@
+#build docker image with latest tag as default.
+
+docker build -t ksudheer08/microservice-aws .
+docker build --no-cache  -t ksudheer08/microservice-aws .
+
+# publish docker image to docker hub
+docker push ksudheer08/microservice-aws
+
+#Commonly used docker commands
+docker images
+docker container ls
+docker image rm <imageid>
+docker pull ksudheer08/microservice-aws:latest
+
+microservice-aws
+
+## AWS Commands
+# Login to EC2 instance
+
+ssh -i "aws-ec2-kpair.pem" ec2-user@ec2-18-191-81-33.us-east-2.compute.amazonaws.com
+
+# Install docker
+sudo yum install docker
+
+# Start Docker service
+sudo service docker start
+
+# pull latest image from docker
+sudo docker pull ksudheer08/microservice-aws:latest
+
+#Run micro service
+
+sudo docker run -p 80:8080 ksudheer08/microservice-aws
+
+#docker build --no-cache -t ksudheer08/microservice-aws -f ksudheer08/microservice-aws .
