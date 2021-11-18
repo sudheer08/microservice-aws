@@ -20,8 +20,8 @@ microservice-aws
 ssh -i "aws-ec2-kpair.pem" ec2-user@ec2-18-191-81-33.us-east-2.compute.amazonaws.com
 
 # Install docker
-sudo yum install docker
 
+sudo yum install docker
 # Start Docker service
 sudo service docker start
 
